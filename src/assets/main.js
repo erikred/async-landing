@@ -27,8 +27,9 @@ async function fetchData(urlAPI) {
     try {
         const videos = await fetchData(API);
         let view = `
-        ${videos.items.map(video => 
-            `<div class="group relative">
+        ${videos.items.map(video =>
+            `<a href="https://youtube.com/watch?v=${video.id.videoId}" target="_blank">
+            <div class="group relative">
             <div
                 class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
                 <img src="${video.snippet.thumbnails.high.url}" alt="${video.snippet.description}" class="w-full">
@@ -39,10 +40,11 @@ async function fetchData(urlAPI) {
                     ${video.snippet.title}
                 </h3>
             </div>
-    </div>`
-        ).slice(0,8).join('')}
+    </div>
+    </a>`
+        ).slice(0, 8).join('')}
     `;
-    content.innerHTML = view;
+        content.innerHTML = view;
     } catch (error) {
         console.error(error);
     }
