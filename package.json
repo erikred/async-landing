@@ -1,0 +1,27 @@
+{
+  "name": "async-landing",
+  "version": "1.0.0",
+  "description": "Landing web page to pratice asynchronism in JavaSript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erikred/async-landing.git"
+  },
+  "keywords": [
+    "asynchronism",
+    "JavaScript"
+  ],
+  "author": "Pariksit Erikrsnan Ortiz Flores",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erikred/async-landing/issues"
+  },
+  "homepage": "https://github.com/erikred/async-landing#readme",
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  }
+}
